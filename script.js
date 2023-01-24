@@ -36,8 +36,26 @@ function createCar(make, model, year) {
   return obj;
 }
 
+//example of creating emty object, initializing it, and returning it
 const myCar = createCar("Honda", "Civic", 2011);
 myCar.make;
 myCar.model;
 myCar.year;
 myCar.introduceStmnt;
+
+//Constructor, a function called using the new keyword
+
+function Person(name) { //note the capitalization
+  this.name = name;
+  this.introduceSelf = function () {
+    console.log(`Hi, my name is ${this.name}.`);
+  };
+}
+
+const frank = new Person("Frank");
+frank.name;
+frank.introduceSelf();
+
+const jill = new Person("Jill");
+jill.name;
+jill.introduceSelf;
